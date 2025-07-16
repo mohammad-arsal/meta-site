@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Ads Pro - Skyrocket Your Sales with Advanced Meta Advertising</title>
+    <meta name="description"
+        content="Transform your DTC brand into a profit-generating machine with data-driven Meta advertising strategies. Expert Meta Ads specialist with 2+ years experience scaling 50+ brands.">
+    <meta name="keywords"
+        content="Meta Ads, Facebook Ads, Instagram Ads, DTC Marketing, Performance Marketing, ROAS, Conversion Optimization">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Meta Ads Pro - Expert Meta Advertising for DTC Brands">
+    <meta property="og:description"
+        content="Skyrocket your sales with advanced Meta advertising strategies. Get your free ad audit today.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metaadspro.com">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meta Ads Pro - Expert Meta Advertising">
+    <meta name="twitter:description" content="Transform your DTC brand with data-driven Meta advertising strategies.">
+
+    <!-- Preload Critical Resources -->
+    <link rel="dns-prefetch" href="//images.pexels.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-content {
+            flex: 1;
+            max-width: 520px;
+            padding-left: -10%;
+            /* Pull away from left edge */
+        }
+
+        .hero-image-container {
+            flex: 0 0 auto;
+            margin-right: -10%;
+            /* Pull away from right edge */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .circle-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid #FFC400;
+            object-fit: cover;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-button {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cursor Trail -->
+    <div id="cursor-trail" class="cursor-trail"></div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="nav-logo" onclick="scrollToSection('hero')">
+
+                    <img src="./images/final-logo-removebg-preview.png" alt="Meta Ads Pro Logo"
+                        style="width: 200px; height: auto;">
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop">
+                    <button class="nav-item" data-section="hero">Home</button>
+                    <button class="nav-item" data-section="about">About</button>
+                    <button class="nav-item" data-section="services">Services</button>
+                    <button class="nav-item" data-section="case-studies">Results</button>
+                    <button class="nav-item" data-section="why-us">Why Us</button>
+                    <button class="nav-cta" onclick="scrollToSection('cta')">Get Free Audit</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i data-lucide="menu" id="menu-icon"></i>
+                    <i data-lucide="x" id="close-icon" style="display: none;"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <button class="mobile-nav-item" data-section="hero">Home</button>
+                <button class="mobile-nav-item" data-section="about">About</button>
+                <button class="mobile-nav-item" data-section="services">Services</button>
+                <button class="mobile-nav-item" data-section="case-studies">Results</button>
+                <button class="mobile-nav-item" data-section="why-us">Why Us</button>
+                <button class="mobile-nav-cta" onclick="scrollToSection('cta')">Get Free Audit</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background"></div>
+
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="floating-element" style="left: 20%; top: 30%; animation-delay: 0s;"></div>
+            <div class="floating-element" style="left: 35%; top: 40%; animation-delay: 0.5s;"></div>
+            <div class="floating-element" style="left: 50%; top: 50%; animation-delay: 1s;"></div>
+            <div class="floating-element" style="left: 65%; top: 60%; animation-delay: 1.5s;"></div>
+            <div class="floating-element" style="left: 80%; top: 70%; animation-delay: 2s;"></div>
+            <div class="floating-element" style="left: 95%; top: 80%; animation-delay: 2.5s;"></div>
+        </div>
+
+
+        <div class="hero-grid">
+            <!-- Left Text Content -->
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="text-yellow">Skyrocket</span> Your Sales<br>
+                    with Advanced<br>
+                    <span class="text-yellow">Meta Ads</span>
+                </h1>
+                <p class="hero-description">
+                    Transform your DTC brand into a profit-generating machine with data-driven Meta advertising
+                    strategies that deliver real results.
+                </p>
+                <div class="hero-button">
+                    <button class="hero-cta" onclick="scrollToSection('cta')">
+                        Let's Boost Your Brand
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Right Profile Image -->
+            <div class="hero-image-container">
+                <img src="./images/profile.jpg" alt="Meta Ads Pro" class="circle-image">
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Left Illustration -->
+                <div class="about-illustration">
+                    <div class="illustration-card">
+                        <div class="illustration-content">
+                            <div class="illustration-icon">
+                                <i data-lucide="bar-chart-3"></i>
+                            </div>
+                            <h3>Expert Meta Ads Specialist</h3>
+                            <p>Scaling DTC brands with precision targeting and creative excellence</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center md:justify-start md:pl-[75px]">
+                        <a href="about.html" class="hero-cta1 mt-6">
+                            About me
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Right Metrics -->
+                <div class="about-content">
+                    <!-- Profile Image -->
+                    <div class="profile-container">
+                        <div class="profile-image">
+                            <img src="./images/profile.jpg" alt="Meta Ads Specialist">
+                            <div class="online-indicator"></div>
+                        </div>
+                    </div>
+
+                    <h2 class="about-title">
+                        Expert in <span class="text-yellow">Scaling Brands</span>
+                    </h2>
+
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <div class="metric-number" id="experience-counter">0</div>
+                            <div class="metric-text">Years Experience</div>
+                        </div>
+
+                        <div class="metric-box">
+                            <div class="metric-number" id="brands-counter">0</div>
+                            <div class="metric-text">Brands Scaled</div>
+                        </div>
+
+                        <div class="metric-box">
+                            <div class="metric-number" id="roas-counter">0</div>
+                            <div class="metric-text">Avg ROAS</div>
+                        </div>
+
+                        <div class="metric-box">
+                            <div class="metric-number" id="ctr-counter">0</div>
+                            <div class="metric-text">Avg CTR</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><span class="text-yellow">Meta Ads</span> That Convert</h2>
+                <p>Full-service Meta advertising solutions for DTC brands</p>
+            </div>
+
+            <div class="services-grid">
+                <a href="./services/meta-pixel.html" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="target"></i> <!-- Meta Pixel: target tracking -->
+                        </div>
+                        <h3>Meta Pixel Setup</h3>
+                        <p>Complete tracking and accurate conversion</p>
+                    </div>
+                </a>
+
+                <a href="./services/audience-research.html" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="users"></i> <!-- Audience -->
+                        </div>
+                        <h3>Audience Research</h3>
+                        <p>Deep audience insights and lookalike creation</p>
+                    </div>
+                </a>
+
+                <a href="./services/adcreativesection.html" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="image"></i> <!-- Ad Creative: Image -->
+                        </div>
+                        <h3>Ad Creative</h3>
+                        <p>High-converting ad designs and copy that sells</p>
+                    </div>
+                </a>
+
+                <a href="./services/funnel-retargeting.html" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="refresh-cw"></i> <!-- Retargeting loop -->
+                        </div>
+                        <h3>Funnel Retargeting</h3>
+                        <p>Strategic remarketing campaigns that convert</p>
+                    </div>
+                </a>
+
+                <a href="./services/laser-targeting-strategy.html" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="crosshair"></i> <!-- Laser Targeting -->
+                        </div>
+                        <h3>Laser Targeting Strategy</h3>
+                        <p>Hyper-targeted campaign segmentation</p>
+                    </div>
+                </a>
+
+                <a href="./services/pixel-training.html" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="graduation-cap"></i> <!-- Training -->
+                        </div>
+                        <h3>Pixel Training & Signal Optimization</h3>
+                        <p>Optimize event signals and empower your team</p>
+                    </div>
+                </a>
+
+                <a href="./services/ad-account-structuring.html" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="layers"></i> <!-- Account Structuring -->
+                        </div>
+                        <h3>Ad Account Structuring</h3>
+                        <p>Streamlined architecture for performance</p>
+                    </div>
+                </a>
+
+                <a href="./services/insight-driven-optimization.html" class="service-card-link">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="bar-chart-2"></i> <!-- Insight & Analytics -->
+                        </div>
+                        <h3>Insight-Driven Optimization</h3>
+                        <p>Data-backed decisions for better ROAS</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="case-studies-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><span class="text-yellow">Real Results</span> from Client Case Studies</h2>
+                <p>See how we've transformed businesses with Meta Ads</p>
+            </div>
+
+            <div class="case-studies-grid">
+                <a href="./stories/skin-care-story.html">
+                    <div class="case-study-card">
+                        <div class="case-study-overlay"></div>
+                        <img src="./images/skincare.jpg" alt="Fashion Boutique">
+
+                        <div class="case-study-content">
+                            <h3>Skin Care</h3>
+                            <div class="case-study-metrics">
+                                <div class="case-metric">
+                                    <div class="case-value">4.42x</div>
+                                    <div class="case-label">ROAS</div>
+                                </div>
+                                <div class="case-metric">
+                                    <div class="case-value">4.9%</div>
+                                    <div class="case-label">Conversion</div>
+                                </div>
+                                <div class="case-metric">
+                                    <div class="case-value">610k</div>
+                                    <div class="case-label">Ad Spend</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="./stories/Tech-story.html">
+                    <div class="case-study-card">
+                        <div class="case-study-overlay"></div>
+                        <img src="./images/Tech.jpg" alt="Tech Startup">
+
+                        <div class="case-study-content">
+                            <h3>Tech Startup</h3>
+                            <div class="case-study-metrics">
+                                <div class="case-metric">
+                                    <div class="case-value">5.9X</div>
+                                    <div class="case-label">ROAS</div>
+                                </div>
+                                <div class="case-metric">
+                                    <div class="case-value">4.8%</div>
+                                    <div class="case-label">Conversion</div>
+                                </div>
+                                <div class="case-metric">
+                                    <div class="case-value">1200k</div>
+                                    <div class="case-label">Ad Spend</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./stories/health-brand.html">
+                    <div class="case-study-card">
+                        <div class="case-study-overlay"></div>
+                        <img src="./images/Healthandwelness.jpg" alt="Health Brand">
+
+                        <div class="case-study-content">
+                            <h3>Health And Wellness Brand</h3>
+                            <div class="case-study-metrics">
+                                <div class="case-metric">
+                                    <div class="case-value">5.2X</div>
+                                    <div class="case-label">ROAS</div>
+                                </div>
+                                <div class="case-metric">
+                                    <div class="case-value">4.2%</div>
+                                    <div class="case-label">Conversion</div>
+                                </div>
+                                <div class="case-metric">
+                                    <div class="case-value">950k</div>
+                                    <div class="case-label">Ad Spend</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us-section">
+        <!-- Floating Data Elements -->
+        <div class="data-elements">
+            <div class="data-dot" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
+            <div class="data-dot" style="left: 22%; top: 28%; animation-delay: 0.3s;"></div>
+            <div class="data-dot" style="left: 34%; top: 36%; animation-delay: 0.6s;"></div>
+            <div class="data-dot" style="left: 46%; top: 44%; animation-delay: 0.9s;"></div>
+            <div class="data-dot" style="left: 58%; top: 52%; animation-delay: 1.2s;"></div>
+            <div class="data-dot" style="left: 70%; top: 60%; animation-delay: 1.5s;"></div>
+            <div class="data-dot" style="left: 82%; top: 68%; animation-delay: 1.8s;"></div>
+            <div class="data-dot" style="left: 94%; top: 76%; animation-delay: 2.1s;"></div>
+        </div>
+
+        <div class="container">
+            <div class="why-us-grid">
+                <!-- Left Robot/AI Scene -->
+                <div class="ai-scene">
+                    <div class="ai-card">
+                        <div class="ai-content">
+                            <div class="ai-icon">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <div class="ai-text">AI-Powered Optimization</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="why-us-content">
+                    <h2>Why Choose <span class="text-yellow">Our Service</span></h2>
+
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i data-lucide="bar-chart-3"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Data-Driven Strategy</h3>
+                                <p>Every decision backed by comprehensive analytics and performance data</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i data-lucide="target"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>AI-Powered Targeting</h3>
+                                <p>Advanced audience segmentation and lookalike modeling</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i data-lucide="trending-up"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Weekly Optimization</h3>
+                                <p>Continuous campaign refinement for maximum ROI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="cta-section">
+        <!-- Rocket Animation -->
+        <div class="rocket-animation">
+            <i data-lucide="rocket"></i>
+        </div>
+
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Scale Your Brand?</h2>
+                <p>Get your free Meta Ads audit and discover untapped opportunities</p>
+
+                <div class="cta-buttons">
+                    <a href="tel:03432395380" class="cta-primary">
+                        <i data-lucide="phone"></i>
+                        Get Your Free Ad Audit
+                    </a>
+
+                    <a href="https://wa.me/923432395380" target="_blank" class="cta-secondary">
+                        <i class="fab fa-whatsapp"></i>
+                        Schedule a Call
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i data-lucide="facebook"></i>
+                        </div>
+                        <span class="logo-text">Meta Ads Pro</span>
+                    </div>
+                    <p>Scaling DTC brands with precision Meta advertising</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Meta Pixel Setup</li>
+                        <li>Audience Research</li>
+                        <li>Ad Creative</li>
+                        <li>Funnel Retargeting</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>
+                            <i data-lucide="phone"></i>
+                            +92 343 2395380
+                        </li>
+                        <li>
+                            <i data-lucide="mail"></i>
+                            digitize.daniyal@gmail.com
+                        </li>
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            Karachi Clifton Pakistan
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <div class="social-link">
+                            <a href="https://www.facebook.com/share/1FjQLoA9yY/" target="_blank" rel="noopener">
+                                <i data-lucide="facebook"></i>
+                            </a>
+                        </div>
+                        <div class="social-link">
+                            <a href="https://www.instagram.com/digitize.daniyal?igsh=MTRtdjI0M2hycmdyYg=="
+                                target="_blank" rel="noopener">
+                                <i data-lucide="instagram"></i>
+                            </a>
+                        </div>
+                        <div class="social-link">
+                            <a href="https://wa.me/923432395380" target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Meta Ads Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
