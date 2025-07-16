@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Audience Research</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0A1F44;
+      color: #ffffff;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #FFC400;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background-color: #172B4D;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(255, 196, 0, 0.2);
+    }
+
+    .card i {
+      color: #FFC400;
+      width: 36px;
+      height: 36px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #D3DCE6;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="section-title">Audience Research</h1>
+
+  <div class="grid">
+    <div class="card">
+      <i data-lucide="users"></i>
+      <h3>Avatar Research</h3>
+      <p>Deep research into demographics, pain points, desires, and behavior of your ideal customer avatars.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="layers"></i>
+      <h3>Interest Stacking</h3>
+      <p>Combine behavior, interests, job titles, and affinities to build high-performing cold audiences.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="user-plus"></i>
+      <h3>Layered Audiences</h3>
+      <p>Create custom audiences for different funnel stages, messaging styles, and A/B testing.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="copy-plus"></i>
+      <h3>Lookalike Audiences</h3>
+      <p>Generate LALs based on high-value sources like past buyers, leads, and top 25% site visitors.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="filter"></i>
+      <h3>Segment Testing</h3>
+      <p>Test different audience segments in each funnel stage (TOFU, MOFU, BOFU) for best ROI.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="user-x"></i>
+      <h3>Exclusion Logic</h3>
+      <p>Exclude warm audiences from prospecting to avoid overlap and ad fatigue in cold campaigns.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="database"></i>
+      <h3>Pixel Data Usage</h3>
+      <p>Leverage website behavior and pixel signals to build data-driven, dynamic audience clusters.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="activity"></i>
+      <h3>Behavior-Based Targeting</h3>
+      <p>Refine targeting using engagement, time on site, video views, and page visit history.</p>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

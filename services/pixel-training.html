@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pixel Training & Signal Optimization</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0A1F44;
+      color: #ffffff;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #FFC400;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background-color: #172B4D;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(255, 196, 0, 0.2);
+    }
+
+    .card i {
+      color: #FFC400;
+      width: 36px;
+      height: 36px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #D3DCE6;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="section-title">Pixel Training & Signal Optimization</h1>
+
+  <div class="grid">
+    <div class="card">
+      <i data-lucide="target"></i>
+      <h3>Conversion Campaigns</h3>
+      <p>Always use conversion-optimized campaigns (not traffic or reach) to collect meaningful signals.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="chevron-down-circle"></i>
+      <h3>Start Low Funnel</h3>
+      <p>Train pixel with bottom-funnel events first (ATC, Purchase) for strong signal quality.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="wand"></i>
+      <h3>Creative Testing</h3>
+      <p>Test variations of ads to let the pixel learn which visuals and angles bring quality results.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="slash"></i>
+      <h3>No Mixed Objectives</h3>
+      <p>Keep campaigns clean — avoid mixing goals like leads and purchases in a single structure.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="hourglass"></i>
+      <h3>Let It Learn</h3>
+      <p>Give the pixel time and budget to optimize. Avoid making changes too early in learning phase.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="minus-circle"></i>
+      <h3>Smart Exclusions</h3>
+      <p>Exclude buyers, non-relevant audiences, or bots to provide clean, focused signal data.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="trending-up"></i>
+      <h3>Scale on Signal</h3>
+      <p>Only scale budgets once your pixel shows stable performance and conversion consistency.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="radar"></i>
+      <h3>Intent Detection</h3>
+      <p>Let the pixel read user intent through engagement depth, scroll time, and site interaction.</p>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

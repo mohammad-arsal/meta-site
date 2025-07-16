@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meta Pixel Setup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0A1F44;
+      color: #ffffff;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #FFC400;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background-color: #172B4D;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(255, 196, 0, 0.2);
+    }
+
+    .card i {
+      color: #FFC400;
+      width: 36px;
+      height: 36px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #D3DCE6;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="section-title">Meta Pixel Setup</h1>
+
+  <div class="grid">
+    <div class="card">
+      <i data-lucide="target"></i>
+      <h3>Accurate Tracking</h3>
+      <p>Capture user actions across your funnel for precise event-based performance tracking.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="sliders-horizontal"></i>
+      <h3>Event Prioritization</h3>
+      <p>Set ViewContent, ATC, and Purchase priorities for iOS 14+ aggregated event measurement.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="mouse-pointer-click"></i>
+      <h3>Pixel Placement</h3>
+      <p>Install pixels correctly on product, cart, checkout, and thank-you pages for funnel clarity.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="alert-triangle"></i>
+      <h3>Fix Event Issues</h3>
+      <p>Resolve missing or duplicate events with Event Manager and Chrome Pixel Helper tools.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="check-circle-2"></i>
+      <h3>Live Verification</h3>
+      <p>Test and verify live events using Meta’s Events Manager for proper data validation.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="shield-check"></i>
+      <h3>iOS 14+ Setup</h3>
+      <p>Implement Aggregated Event Measurement to track user actions under Apple privacy rules.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="flag-triangle-right"></i>
+      <h3>Campaign Alignment</h3>
+      <p>Align tracked events with campaign goals — whether sales, leads, or awareness.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="bar-chart-2"></i>
+      <h3>Full Funnel Tracking</h3>
+      <p>Ensure every part of the customer journey is monitored from entry to final conversion.</p>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

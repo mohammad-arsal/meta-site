@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ad Creative</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0A1F44;
+      color: #ffffff;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #FFC400;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background-color: #172B4D;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(255, 196, 0, 0.2);
+    }
+
+    .card i {
+      color: #FFC400;
+      width: 36px;
+      height: 36px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #D3DCE6;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="section-title">Ad Creative</h1>
+
+  <div class="grid">
+    <div class="card">
+      <i data-lucide="layout-template"></i>
+      <h3>Format Selection</h3>
+      <p>Choose the right ad format — carousel, story, reel, or static — based on product & placement.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="zap"></i>
+      <h3>Hook Scripting</h3>
+      <p>Craft scroll-stopping hooks in the first 3 seconds using curiosity, problem, or motion cues.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="image"></i>
+      <h3>Visual Impact</h3>
+      <p>Use UGC-style visuals, motion overlays, and clean framing to halt scrolling and boost watch time.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="type"></i>
+      <h3>Copywriting Flow</h3>
+      <p>Follow the formula: problem → benefit → CTA, optimized for skimmers and mobile readers.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="divide-square"></i>
+      <h3>Funnel Alignment</h3>
+      <p>Cold audiences need pain-driven creative; warm audiences prefer proof, benefits, and trust.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="repeat"></i>
+      <h3>A/B Creative Testing</h3>
+      <p>Test thumbnails, intros, formats, copy, and visuals to improve CTR and conversion rates.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="palette"></i>
+      <h3>Brand Consistency</h3>
+      <p>Keep fonts, colors, logos, and tone aligned with your brand for trust and recognizability.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="sparkles"></i>
+      <h3>Scroll-Stopping Content</h3>
+      <p>Incorporate motion, emojis, close-ups, or contrast to grab attention on every scroll.</p>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ad Account Structuring</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0A1F44;
+      color: #ffffff;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #FFC400;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background-color: #172B4D;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(255, 196, 0, 0.2);
+    }
+
+    .card i {
+      color: #FFC400;
+      width: 36px;
+      height: 36px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #D3DCE6;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="section-title">Ad Account Structuring</h1>
+
+  <div class="grid">
+    <div class="card">
+      <i data-lucide="layout-grid"></i>
+      <h3>CBO vs ABO</h3>
+      <p>Use Campaign Budget Optimization (CBO) for scaling; Ad Set Budgets (ABO) for tight testing control.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="type"></i>
+      <h3>Naming Conventions</h3>
+      <p>Apply structured naming for easy tracking — include audience, creative type, and objective.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="divide-circle"></i>
+      <h3>Funnel Separation</h3>
+      <p>Break campaigns into top, middle, and bottom-funnel to tailor objectives and messaging.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="flask-conical"></i>
+      <h3>Isolated Testing</h3>
+      <p>Keep creative or audience tests isolated in ad sets. Don’t mix variables in one test group.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="wallet"></i>
+      <h3>Budget Allocation</h3>
+      <p>Follow clear allocation rules — e.g. 20% test, 80% scale — and update weekly based on data.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="circle-slash-2"></i>
+      <h3>Overlap Prevention</h3>
+      <p>Separate audiences across campaigns to avoid bidding against yourself and raising CPMs.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="split"></i>
+      <h3>Test vs Scale</h3>
+      <p>Run testing and scaling in completely separate campaigns with distinct budgets and goals.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="settings-2"></i>
+      <h3>Structural Consistency</h3>
+      <p>Maintain a repeatable, easy-to-scale account structure across all clients and product types.</p>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

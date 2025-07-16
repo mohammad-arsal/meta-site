@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laser Targeting Strategy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0A1F44;
+      color: #ffffff;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #FFC400;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background-color: #172B4D;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(255, 196, 0, 0.2);
+    }
+
+    .card i {
+      color: #FFC400;
+      width: 36px;
+      height: 36px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #D3DCE6;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="section-title">Laser Targeting Strategy</h1>
+
+  <div class="grid">
+    <div class="card">
+      <i data-lucide="crosshair"></i>
+      <h3>Layered Interests</h3>
+      <p>Use stacked interest-based targeting to narrow down and refine your audience quality.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="eye"></i>
+      <h3>Engagement Signals</h3>
+      <p>Leverage video views, page engagement, and interaction-based signals for warm targeting.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="split"></i>
+      <h3>Cold vs Warm</h3>
+      <p>Create separate cold and warm audience layers for personalized, funnel-specific messaging.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="ban"></i>
+      <h3>Audience Exclusion</h3>
+      <p>Avoid overlap by excluding audiences across ad sets, campaigns, or funnel stages.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="layers"></i>
+      <h3>Targeting Stack Testing</h3>
+      <p>Test different targeting stacks per ad set for optimized reach and conversion performance.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="wand-2"></i>
+      <h3>AI Suggestions</h3>
+      <p>Use Meta’s built-in suggestion tool to discover hidden interests and behavior clusters.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="bar-chart-2"></i>
+      <h3>Weekly Optimization</h3>
+      <p>Review targeting performance weekly and refine based on CTR, reach, and ROAS data.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="activity"></i>
+      <h3>Behavior-Based Layers</h3>
+      <p>Build audiences around site time, scroll depth, and content engagement metrics.</p>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

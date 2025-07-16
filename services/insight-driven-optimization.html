@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insight-Driven Optimization</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0A1F44;
+      color: #ffffff;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #FFC400;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background-color: #172B4D;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(255, 196, 0, 0.2);
+    }
+
+    .card i {
+      color: #FFC400;
+      width: 36px;
+      height: 36px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #D3DCE6;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="section-title">Insight-Driven Optimization</h1>
+
+  <div class="grid">
+    <div class="card">
+      <i data-lucide="bar-chart-2"></i>
+      <h3>Performance Metrics</h3>
+      <p>Track CTR, CPM, ROAS, CPR and optimize based on real data, not assumptions or emotion.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="trash-2"></i>
+      <h3>Kill Fast</h3>
+      <p>Pause underperforming ad sets early to preserve budget and focus on high-return ad sets.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="dollar-sign"></i>
+      <h3>Reinvest Smartly</h3>
+      <p>Double down on top creatives by allocating more budget to what’s proven to convert.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="trending-up"></i>
+      <h3>Scaling Strategy</h3>
+      <p>Use horizontal scaling (duplicate & diversify) and vertical scaling (increase budgets) effectively.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="sliders-horizontal"></i>
+      <h3>Budget Reallocation</h3>
+      <p>Shift spend toward ad sets or campaigns delivering the highest ROAS and lowest CPA.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="calendar-days"></i>
+      <h3>Routine Review</h3>
+      <p>Implement daily/weekly review cycles for optimization based on performance trends.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="activity"></i>
+      <h3>Behavioral Insight</h3>
+      <p>Monitor user interactions to fine-tune creative, placement, or offer messaging.</p>
+    </div>
+
+    <div class="card">
+      <i data-lucide="lightbulb"></i>
+      <h3>Decision by Data</h3>
+      <p>Let numbers drive action — use dashboards, compare trends, avoid “gut feeling” decisions.</p>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
