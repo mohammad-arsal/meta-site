@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Brand Success Story Case Study</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.8), transparent);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            padding: 0 24px;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            color: white;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .highlight {
+            color: #FFC400;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.25rem, 3vw, 2rem);
+            color: #cbd5e1;
+            margin-bottom: 32px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highlight-revenue {
+            color: #FFC400;
+            font-weight: 700;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .meta-divider {
+            color: #64748b;
+        }
+
+        /* Overview Section */
+        .overview {
+            padding: 80px 0;
+            background-color: #f8fafc;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .stats-box {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+        }
+
+        .stats-box h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 24px;
+        }
+
+        .stats-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stat-label {
+            color: #64748b;
+        }
+
+        .stat-value {
+            font-weight: 700;
+        }
+
+        .stat-value.before {
+            color: #ef4444;
+        }
+
+        .stat-value.after {
+            color: #22c55e;
+            font-size: 1.5rem;
+        }
+
+        .stat-value.revenue {
+            color: #3b82f6;
+            font-size: 1.5rem;
+        }
+
+        .stat-value.platform {
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        .stat-divider {
+            height: 1px;
+            background-color: #e2e8f0;
+        }
+
+        .key-insight {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .insight-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brain-icon {
+            width: 32px;
+            height: 32px;
+            color: #FFC400;
+        }
+
+        .insight-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .insight-quote {
+            font-size: 1.25rem;
+            color: #374151;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .insight-footer {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+
+        .insight-line {
+            width: 48px;
+            height: 2px;
+            background-color: #FFC400;
+        }
+
+        /* Timeline Section */
+        .timeline {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            color: #1e293b;
+            margin-bottom: 64px;
+        }
+
+        .timeline-phases {
+            display: flex;
+            flex-direction: column;
+            gap: 64px;
+        }
+
+        .phase-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .phase-item.reverse {
+            direction: rtl;
+        }
+
+        .phase-item.reverse>* {
+            direction: ltr;
+        }
+
+        .phase-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .phase-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .phase-icon.orange {
+            background-color: #f97316;
+        }
+
+        .phase-icon.blue {
+            background-color: #2563eb;
+        }
+
+        .phase-icon.green {
+            background-color: #16a34a;
+        }
+
+        .phase-icon .icon {
+            color: white;
+        }
+
+        .phase-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .phase-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .phase-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #374151;
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            color: #22c55e;
+            flex-shrink: 0;
+        }
+
+        .phase-result {
+            background-color: #dcfce7;
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 4px solid #22c55e;
+        }
+
+        .phase-result p {
+            color: #166534;
+            font-weight: 600;
+        }
+
+        .phase-description {
+            font-size: 1.125rem;
+            color: #374151;
+        }
+
+        .phase-highlight {
+            background-color: #dbeafe;
+            padding: 24px;
+            border-radius: 8px;
+        }
+
+        .highlight-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .highlight-header .icon {
+            color: #2563eb;
+        }
+
+        .highlight-header span {
+            font-weight: 600;
+            color: #1e40af;
+        }
+
+        .phase-highlight p {
+            color: #1e40af;
+        }
+
+        .phase-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .metric-card {
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .metric-card.green {
+            background-color: #dcfce7;
+        }
+
+        .metric-card.purple {
+            background-color: #f3e8ff;
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .metric-card.green .metric-value {
+            color: #166534;
+        }
+
+        .metric-card.purple .metric-value {
+            color: #7c3aed;
+        }
+
+        .metric-label {
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+
+        .phase-visual {
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .orange-bg {
+            background: linear-gradient(135deg, #fed7aa, #fdba74);
+        }
+
+        .blue-bg {
+            background: linear-gradient(135deg, #dbeafe, #93c5fd);
+        }
+
+        .green-bg {
+            background: linear-gradient(135deg, #dcfce7, #86efac);
+        }
+
+        .phase-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin: 0 auto 16px;
+        }
+
+        .orange-bg .phase-number {
+            background-color: #f97316;
+        }
+
+        .blue-bg .phase-number {
+            background-color: #2563eb;
+        }
+
+        .green-bg .phase-number {
+            background-color: #16a34a;
+        }
+
+        .phase-visual h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .orange-bg h4 {
+            color: #9a3412;
+        }
+
+        .blue-bg h4 {
+            color: #1e40af;
+        }
+
+        .green-bg h4 {
+            color: #166534;
+        }
+
+        .phase-visual p {
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+
+        .phase-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.875rem;
+        }
+
+        .stat-card .stat-label {
+            color: #64748b;
+        }
+
+        .stat-card .stat-value {
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        /* Key Wins Section */
+        .key-wins {
+            padding: 80px 0;
+            background-color: #f1f5f9;
+        }
+
+        .wins-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .win-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .win-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-2px);
+        }
+
+        .win-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .win-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .win-icon.blue {
+            color: #2563eb;
+        }
+
+        .win-icon.green {
+            color: #16a34a;
+        }
+
+        .win-icon.purple {
+            color: #7c3aed;
+        }
+
+        .win-icon.orange {
+            color: #f97316;
+        }
+
+        .win-icon.indigo {
+            color: #4f46e5;
+        }
+
+        .win-icon.yellow {
+            color: #eab308;
+        }
+
+        .win-header h3 {
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .win-card p {
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1s ease-out;
+        }
+
+        .progress-fill.blue {
+            background-color: #2563eb;
+        }
+
+        .progress-fill.green {
+            background-color: #16a34a;
+        }
+
+        .progress-fill.purple {
+            background-color: #7c3aed;
+        }
+
+        .progress-fill.orange {
+            background-color: #f97316;
+        }
+
+        .progress-fill.indigo {
+            background-color: #4f46e5;
+        }
+
+        .progress-fill.yellow {
+            background-color: #eab308;
+        }
+
+        /* Quote Banner */
+        .quote-banner {
+            padding: 64px 0;
+            background: linear-gradient(to right, #1e293b, #1e3a8a);
+        }
+
+        .quote-text {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: white;
+            font-style: italic;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-line {
+            width: 64px;
+            height: 4px;
+            background-color: #FFC400;
+            border-radius: 2px;
+            margin: 24px auto 0;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+        }
+
+        .cta-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: white;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: #bfdbfe;
+            text-align: center;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 48px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            min-width: 200px;
+        }
+
+        .btn-primary {
+            background-color: #FFC400;
+            color: #1e40af;
+        }
+
+        .btn-primary:hover {
+            background-color: #fbbf24;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #1e40af;
+            transform: translateY(-2px);
+        }
+
+        .btn-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .btn-arrow {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cta-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .cta-stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #FFC400;
+            margin-bottom: 8px;
+        }
+
+        .cta-stat-label {
+            color: #bfdbfe;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .overview-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .phase-item {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .phase-item.reverse {
+                direction: ltr;
+            }
+
+            .wins-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero {
+                height: 80vh;
+            }
+
+            .hero-meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .meta-divider {
+                display: none;
+            }
+
+            .overview,
+            .timeline,
+            .key-wins,
+            .cta {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 48px;
+            }
+
+            .timeline-phases {
+                gap: 48px;
+            }
+
+            .phase-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .cta-stats {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .stats-box,
+            .phase-visual {
+                padding: 24px;
+            }
+
+            .win-card {
+                padding: 20px;
+            }
+
+            .phase-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                From <span class="highlight">Unknown</span> to <span class="highlight">Unstoppable</span>
+            </h1>
+            <p class="hero-subtitle">
+                How We Scaled a Failing Tech Brand to <span class="highlight-revenue">50M+</span> in Sales
+            </p>
+            <div class="hero-meta">
+                <span class="meta-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    Brand Onboard Date: October 5, 2024
+                </span>
+                <span class="meta-divider">|</span>
+                <span>Industry: Skincare</span>
+                <span class="meta-divider">|</span>
+                <span>Platform: Shopify + Meta Ads</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview">
+        <div class="container">
+            <div class="overview-grid">
+                <!-- Stats Box -->
+                <div class="stats-box">
+                    <h3>Transformation Metrics</h3>
+                    <div class="stats-list">
+                        <div class="stat-item">
+                            <span class="stat-label">ROAS Before:</span>
+                            <span class="stat-value before">0.5-1x</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">ROAS After:</span>
+                            <span class="stat-value after" id="roas-counter">5x+</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-label">Total Revenue:</span>
+                            <span class="stat-value revenue">PKR <span id="revenue-counter">50</span>M+</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Platform:</span>
+                            <span class="stat-value platform">Meta Ads + Shopify</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Insight -->
+                <div class="key-insight">
+                    <div class="insight-header">
+                        <svg class="icon brain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z">
+                            </path>
+                            <path
+                                d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z">
+                            </path>
+                        </svg>
+                        <h3>Key Insight</h3>
+                    </div>
+                    <blockquote class="insight-quote">
+                        In late 2024, a tech product brand came to me.
+                        They were running ads for smart gadgets (like earbuds, fast chargers, and mobile accessories) —
+                        but their campaigns were bleeding cash. Despite getting clicks, sales weren't happening, and the
+                        average ROAS was stuck at 1.2x.
+
+                    </blockquote>
+                    <div class="insight-footer">
+                        <div class="insight-line"></div>
+                        <span>Strategic Foundation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <div class="container">
+            <h2 class="section-title">The Transformation Journey</h2>
+
+            <div class="timeline-phases">
+                <!-- Phase 1 -->
+                <div class="phase-item">
+                    <div class="phase-content">
+                        <div class="phase-header">
+                            <div class="phase-icon orange">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="6"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                </svg>
+                            </div>
+                            <h3>Phase 1:Diagnose the Real Problem
+                            </h3>
+                        </div>
+                        <ul class="phase-list">
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                                Pixel setup (which was missing key custom events)
+                            </li>
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                                Campaign structure (everything was crammed into one ad set)
+                            </li>
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                                Audience signals (irrelevant interest targeting with no warm funnel)
+
+                            </li>
+                        </ul>
+                        <div class="phase-result">
+                            <p>✅ Result: First campaign saw instant performance jump</p>
+                        </div>
+                    </div>
+                    <div class="phase-visual orange-bg">
+                        <div class="phase-number">1</div>
+                        <h4>Foundation Phase</h4>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="phase-item reverse">
+                    <div class="phase-visual blue-bg">
+                        <div class="phase-number">2</div>
+                        <h4>AI Optimization</h4>
+                        <div class="phase-stats">
+                            <div class="stat-card">
+                                <span class="stat-label">Spend:</span>
+                                <span class="stat-value">PKR 690,000</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-label">Revenue:</span>
+                                <span class="stat-value">PKR 4.1 Million</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-label">ROAS:</span>
+                                <span class="stat-value">Approx 5.9X</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-header">
+                            <div class="phase-icon blue">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                                </svg>
+                            </div>
+                            <h3>Phase 2: What We Fixed:</h3>
+                        </div>
+                        <p class="phase-description">
+                            Pixel Setup & Custom Events
+
+                            Installed and verified pixel events (ViewContent, ATC, Purchase)
+
+                            Created Custom Conversions to track bundled product sales and upsells
+
+                        </p>
+                        <div class="phase-highlight">
+                            <div class="highlight-header">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                                </svg>
+                                <span>Performance Breakthrough</span>
+                            </div>
+                            <p>Achieved 5.9X ROAS with systematic AI optimization and data-driven decision making.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="phase-item">
+                    <div class="phase-content">
+                        <div class="phase-header">
+                            <div class="phase-icon green">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"></polyline>
+                                    <polyline points="16,7 22,7 22,13"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Phase 3: Viral Growth & Scaling</h3>
+                        </div>
+                        <div class="phase-metrics">
+                            <div class="metric-card green">
+                                <div class="metric-value">PKR 8M+</div>
+                                <div class="metric-label">Revenue Month 2</div>
+                            </div>
+                            <div class="metric-card purple">
+                                <div class="metric-value">PKR 50M+</div>
+                                <div class="metric-label">Total Sales</div>
+                            </div>
+                        </div>
+                        <ul class="phase-list">
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                                Their daily ROAS went from 1.2 to over 6 within 3 weeks of proper structuring and signal feeding.
+                            </li>
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                                Reached PKR 50M+ in total sales
+                            </li>
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                                Resulted in copycats entering the market
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="phase-visual green-bg">
+                        <div class="phase-number">3</div>
+                        <h4>Viral Scaling</h4>
+                        <p>Market leadership achieved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Wins Section -->
+    <section class="key-wins">
+        <div class="container">
+            <h2 class="section-title">Key Achievements</h2>
+
+            <div class="wins-grid">
+                <div class="win-card">
+                    <div class="win-header">
+                        <svg class="win-icon blue" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <h3>ROAS Transformation</h3>
+                    </div>
+                    <p>From 0.5x → 5x+ ROAS</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill blue" style="width: 83%"></div>
+                    </div>
+                </div>
+
+                <div class="win-card">
+                    <div class="win-header">
+                        <svg class="win-icon green" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        <h3>Revenue Generated</h3>
+                    </div>
+                    <p>PKR 4.1 Million+ generated</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill green" style="width: 100%"></div>
+                    </div>
+                </div>
+
+                <div class="win-card">
+                    <div class="win-header">
+                        <svg class="win-icon purple" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <h3>Market Impact</h3>
+                    </div>
+                    <p>Brand became viral + copied</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill purple" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="win-card">
+                    <div class="win-header">
+                        <svg class="win-icon orange" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                        <h3>Growth Systems</h3>
+                    </div>
+                    <p>Created long-term growth systems</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill orange" style="width: 83%"></div>
+                    </div>
+                </div>
+
+                <div class="win-card">
+                    <div class="win-header">
+                        <svg class="win-icon indigo" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z">
+                            </path>
+                            <path
+                                d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z">
+                            </path>
+                        </svg>
+                        <h3>Brand Positioning</h3>
+                    </div>
+                    <p>Positioned as trusted skincare brand</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill indigo" style="width: 100%"></div>
+                    </div>
+                </div>
+
+                <div class="win-card">
+                    <div class="win-header">
+                        <svg class="win-icon yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"></polyline>
+                            <polyline points="16,7 22,7 22,13"></polyline>
+                        </svg>
+                        <h3>Sustainable Growth</h3>
+                    </div>
+                    <p>Scalable and repeatable systems</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill yellow" style="width: 83%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Banner -->
+    <section class="quote-banner">
+        <div class="container">
+            <blockquote class="quote-text">
+                "This isn't luck — this is what happens when data, creativity, and strategy come together."
+            </blockquote>
+            <div class="quote-line"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">Ready to Build Your Own Success Story?</h2>
+            <p class="cta-subtitle">
+                Join the brands that chose transformation over stagnation. Let's scale your business to new heights.
+            </p>
+
+            <div class="cta-buttons">
+                <button class="btn btn-primary">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                    Get Free Audit
+                </button>
+                <button class="btn btn-secondary">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                    Book Strategy Call
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12,5 19,12 12,19"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="cta-stats">
+                <div class="cta-stat">
+                    <div class="cta-stat-value" id="brands-counter">100</div>
+                    <div class="cta-stat-label">Brands Scaled</div>
+                </div>
+                <div class="cta-stat">
+                    <div class="cta-stat-value">PKR <span id="revenue-counter-2">50</span>M+</div>
+                    <div class="cta-stat-label">Revenue Generated</div>
+                </div>
+                <div class="cta-stat">
+                    <div class="cta-stat-value" id="roas-counter-2">5</div>
+                    <div class="cta-stat-label">Average ROAS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Animation and Counter Functions
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize animations
+            initializeAnimations();
+
+            // Initialize counters
+            initializeCounters();
+
+            // Initialize scroll animations
+            initializeScrollAnimations();
+        });
+
+        function initializeAnimations() {
+            // Add fade-in class to elements that should animate
+            const animatedElements = document.querySelectorAll('.stats-box, .key-insight, .phase-item, .win-card');
+            animatedElements.forEach(el => {
+                el.classList.add('fade-in');
+            });
+        }
+
+        function initializeCounters() {
+            const counters = [
+                { id: 'roas-counter', target: 5, suffix: 'x+', duration: 2000 },
+                { id: 'revenue-counter', target: 50, suffix: '', duration: 2000 },
+                { id: 'brands-counter', target: 100, suffix: '+', duration: 2000 },
+                { id: 'revenue-counter-2', target: 50, suffix: '', duration: 2000 },
+                { id: 'roas-counter-2', target: 5, suffix: 'x+', duration: 2000 }
+            ];
+
+            // Start counters after a delay
+            setTimeout(() => {
+                counters.forEach(counter => {
+                    animateCounter(counter.id, counter.target, counter.suffix, counter.duration);
+                });
+            }, 1000);
+        }
+
+        function animateCounter(elementId, target, suffix = '', duration = 2000) {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+
+            let start = 0;
+            const increment = target / (duration / 16);
+
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target + suffix;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start) + suffix;
+                }
+            }, 16);
+        }
+
+        function initializeScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+
+                        // Animate progress bars when they come into view
+                        const progressBars = entry.target.querySelectorAll('.progress-fill');
+                        progressBars.forEach(bar => {
+                            const width = bar.style.width;
+                            bar.style.width = '0%';
+                            setTimeout(() => {
+                                bar.style.width = width;
+                            }, 200);
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+        }
+
+        // Smooth scrolling for anchor links (if any are added)
+        function smoothScroll(target) {
+            const element = document.querySelector(target);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Button click handlers
+        document.addEventListener('click', function (e) {
+            if (e.target.matches('.btn-primary') || e.target.closest('.btn-primary')) {
+                // Handle "Get Free Audit" button click
+                console.log('Get Free Audit clicked');
+                // Add your tracking or redirect logic here
+            }
+
+            if (e.target.matches('.btn-secondary') || e.target.closest('.btn-secondary')) {
+                // Handle "Book Strategy Call" button click
+                console.log('Book Strategy Call clicked');
+                // Add your tracking or redirect logic here
+            }
+        });
+
+        // Add hover effects for interactive elements
+        function addHoverEffects() {
+            const cards = document.querySelectorAll('.win-card, .stats-box');
+
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-4px)';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        }
+
+        // Initialize hover effects
+        document.addEventListener('DOMContentLoaded', addHoverEffects);
+
+        // Parallax effect for hero section
+        function initializeParallax() {
+            const hero = document.querySelector('.hero');
+            const heroBackground = document.querySelector('.hero-background');
+
+            if (!hero || !heroBackground) return;
+
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.5;
+
+                if (scrolled < hero.offsetHeight) {
+                    heroBackground.style.transform = `translateY(${rate}px)`;
+                }
+            });
+        }
+
+        // Initialize parallax on load
+        document.addEventListener('DOMContentLoaded', initializeParallax);
+
+        // Performance optimization: Throttle scroll events
+        function throttle(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Apply throttling to scroll events
+        const throttledScroll = throttle(() => {
+            // Any scroll-based animations can go here
+        }, 16);
+
+        window.addEventListener('scroll', throttledScroll);
+
+        // Add loading animation
+        window.addEventListener('load', function () {
+            document.body.classList.add('loaded');
+
+            // Trigger any load-based animations
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.animationDelay = '0.5s';
+            }
+        });
+
+        // Mobile menu toggle (if needed for future enhancements)
+        function toggleMobileMenu() {
+            const menu = document.querySelector('.mobile-menu');
+            if (menu) {
+                menu.classList.toggle('active');
+            }
+        }
+
+        // Form validation (for future contact forms)
+        function validateForm(form) {
+            const inputs = form.querySelectorAll('input[required], textarea[required]');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('error');
+                } else {
+                    input.classList.remove('error');
+                }
+            });
+
+            return isValid;
+        }
+
+        // Analytics tracking helper
+        function trackEvent(eventName, properties = {}) {
+            // Add your analytics tracking code here
+            console.log('Event tracked:', eventName, properties);
+
+            // Example for Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, properties);
+            }
+
+            // Example for Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', eventName, properties);
+            }
+        }
+
+        // Track button clicks
+        document.addEventListener('click', function (e) {
+            if (e.target.matches('.btn-primary')) {
+                trackEvent('audit_button_click', {
+                    section: 'cta',
+                    button_text: 'Get Free Audit'
+                });
+            }
+
+            if (e.target.matches('.btn-secondary')) {
+                trackEvent('strategy_call_button_click', {
+                    section: 'cta',
+                    button_text: 'Book Strategy Call'
+                });
+            }
+        });
+
+        // Lazy loading for images (if more images are added)
+        function initializeLazyLoading() {
+            const images = document.querySelectorAll('img[data-src]');
+
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            images.forEach(img => imageObserver.observe(img));
+        }
+
+        // Initialize lazy loading
+        document.addEventListener('DOMContentLoaded', initializeLazyLoading);
+    </script>
+</body>
+
+</html>
